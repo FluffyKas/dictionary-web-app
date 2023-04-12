@@ -1,0 +1,102 @@
+@use '../../assets/styles/variables' as *;
+
+.radio-switch {
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+  margin-bottom: 5.5rem;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.radio-switch:hover {
+  opacity: 0.8;
+}
+
+/* CSS just doesn't do any magic on legend, so let's hide it :( */
+.radio-switch legend {
+  font-size: 2px;
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-switch label {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2;
+  position: relative;
+  z-index: 2;
+}
+
+.radio-switch input {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-switch label:first-of-type {
+  padding-right: 5em;
+}
+
+.radio-switch label:last-child {
+  margin-left: -4.5em;
+  padding-left: 5em;
+}
+
+.radio-switch:focus-within label:first-of-type:after {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px $clr-neutral-grey-300;
+}
+
+.radio-switch.focus-within label:first-of-type:after {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px $clr-neutral-grey-300;
+}
+
+.radio-switch label:first-of-type:before,
+.radio-switch label:first-of-type:after {
+  content: '';
+  height: 20px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.radio-switch label:first-of-type:before {
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.175rem;
+  right: 1.5rem;
+  transform: translateX(0em);
+  transition: all 0.2s ease-in-out;
+  width: 14px;
+  height: 14px;
+  z-index: 2;
+}
+
+.radio-switch label:first-of-type:after {
+  background: $clr-neutral-grey-300;
+  border-radius: 1em;
+  margin: 0 1em;
+  transition: all 0.2s ease-in-out;
+  width: 42px;
+}
+
+/*
+  Visually change the switch UI to match the
+  checked state of the first radio button
+*/
+.radio-switch input:first-of-type:checked ~ label:first-of-type:after {
+  background: $clr-neutral-grey-300;
+}
+
+.radio-switch input:first-of-type:checked ~ label:first-of-type:before {
+  transform: translateX(-1.45em);
+}
+
+/* Move the 2nd label to have a lower z-index, so when that
+   option is toggled, the first label will overlay on top of the
+   Switch ui, and the switch can be pressed again to toggle back
+   to the prevoius state. */
+.radio-switch input:last-of-type:checked ~ label:last-of-type {
+  z-index: 1;
+}
