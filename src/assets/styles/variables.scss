@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+//COLOURS
+
+//Primary colours
+
+$clr-primary-red: hsl(0, 100%, 66%);
+$clr-primary-purple: hsl(274, 82%, 60%);
+
+//Neutral colours
+
+$clr-neutral-white: hsl(0, 0%, 100%);
+$clr-neutral-black: hsl(0, 0%, 8%);
+$clr-neutral-grey-100: hsl(0, 0%, 96%);
+$clr-neutral-grey-200: hsl(0, 0%, 91%);
+$clr-neutral-grey-300: hsl(0, 0%, 51%);
+$clr-neutral-grey-400: hsl(0, 0%, 23%);
+$clr-neutral-grey-500: hsl(0, 0%, 18%);
+$clr-neutral-grey-600: hsl(0, 0%, 12%);
+
+//FONTS
+
+$font-sans-serif: 'Inter', sans-serif;
+$font-serif: 'Lora', serif;
+$font-mono: 'Inconsolata', monospace;

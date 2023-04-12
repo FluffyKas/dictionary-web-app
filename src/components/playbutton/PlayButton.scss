@@ -1,0 +1,26 @@
+@use '../assets/styles/variables.scss' as *;
+
+.play-btn {
+  all: unset;
+  cursor: pointer;
+
+  path {
+    fill: $clr-primary-purple;
+    transition: all 0.2s ease-in-out;
+  }
+
+  circle {
+    opacity: 0.25;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    path {
+      fill: white;
+    }
+
+    circle {
+      opacity: 1;
+    }
+  }
+}

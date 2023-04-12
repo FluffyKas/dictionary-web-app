@@ -1,0 +1,32 @@
+@use '../../assets/styles/variables' as *;
+
+.search-input {
+  background: $clr-neutral-grey-100;
+  border: none;
+  border-radius: 16px;
+  color: $clr-neutral-grey-500;
+  font-size: 1.25rem;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+
+  &:focus {
+    outline: 1px solid $clr-primary-purple;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $clr-primary-purple;
+  }
+}
+
+.error-msg {
+  font-family: inherit;
+  font-size: 1.25rem;
+  line-height: 24px;
+  color: $clr-primary-red;
+}
